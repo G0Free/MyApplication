@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyApplication.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="10"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Image
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="100"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Hello, Friend!"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Welcome to Weather Forecast!"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="RefreshBtn"
+                Text="Refresh"
+                SemanticProperties.Hint="Refreshes the weather temperature"
+                Clicked="RefreshClicked"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Current temperature:"
+                SemanticProperties.HeadingLevel="Level3"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="TemperatureValue"
+                Text=""
+                SemanticProperties.HeadingLevel="Level4"
+                FontSize="24"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
