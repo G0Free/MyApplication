@@ -30,7 +30,7 @@ namespace MyApplication
             var currentWeather = JsonConvert.DeserializeObject<WeatherInfo>(weatherInfo);
             temp = currentWeather.CurrentWeather.Temperature.ToString();
 
-            TemperatureValue.Text = temp;
+            TemperatureValue.Text = temp + " C";
             SemanticScreenReader.Announce(TemperatureValue.Text);
         }
 

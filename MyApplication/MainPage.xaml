@@ -6,7 +6,7 @@
     <ScrollView>
         <VerticalStackLayout
             Spacing="10"
-            Padding="30,0"
+            Padding="0,0"
             VerticalOptions="Center">
 
             <Image
@@ -42,12 +42,6 @@
                 FontSize="18"
                 HorizontalOptions="Center" />
 
-            <Label
-                x:Name="TemperatureValue"
-                Text=""
-                SemanticProperties.HeadingLevel="Level4"
-                FontSize="24"
-                HorizontalOptions="Center" />
 
         </VerticalStackLayout>
     </ScrollView>
