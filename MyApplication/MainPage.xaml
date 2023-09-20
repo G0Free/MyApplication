@@ -41,7 +41,52 @@
                 SemanticProperties.HeadingLevel="Level3"
                 FontSize="18"
                 HorizontalOptions="Center" />
+            
+            <Label
+               x:Name="TemperatureValue"
+               Text="lorem C"
+               SemanticProperties.HeadingLevel="Level4"
+               FontSize="24"
+               HorizontalOptions="Center" />
 
+            <Label
+               Text="Current time:"
+               SemanticProperties.HeadingLevel="Level3"
+               FontSize="18"
+               HorizontalOptions="Center" />
+
+            <Label
+               x:Name="TimeValue"
+               Text="lo:rem"
+               SemanticProperties.HeadingLevel="Level4"
+               FontSize="24"
+               HorizontalOptions="Center" />
+
+            <Label
+               Text="Current windspeed:"
+               SemanticProperties.HeadingLevel="Level3"
+               FontSize="18"
+               HorizontalOptions="Center" />
+
+            <Label
+               x:Name="WindSpeedValue"
+               Text="lorem km/h"
+               SemanticProperties.HeadingLevel="Level4"
+               FontSize="24"
+               HorizontalOptions="Center" />
+
+            <Label
+               Text="Current wind direction:"
+               SemanticProperties.HeadingLevel="Level3"
+               FontSize="18"
+               HorizontalOptions="Center" />
+
+            <Label
+               x:Name="WindDirectionValue"
+               Text="lorem"
+               SemanticProperties.HeadingLevel="Level4"
+               FontSize="24"
+               HorizontalOptions="Center" />
 
         </VerticalStackLayout>
     </ScrollView>
