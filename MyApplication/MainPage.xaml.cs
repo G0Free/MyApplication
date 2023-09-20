@@ -59,12 +59,13 @@ namespace MyApplication
 
 
             Arrow.Rotation = (double)currentWeather.CurrentWeather.Winddirection;
-            
+
             //SemanticScreenReader.Announce(TemperatureValue.Text);
             //SemanticScreenReader.Announce(TimeValue.Text);
             //SemanticScreenReader.Announce(WindSpeedValue.Text);
             //SemanticScreenReader.Announce(WindDirectionValue.Text);
             //SemanticScreenReader.Announce(Arrow.Rotation.ToString());
+           
             
         }
 

@@ -6,7 +6,7 @@
     xmlns:local="clr-namespace:MyApplication"
     Shell.FlyoutBehavior="Disabled">
 
-    <TabBar >
+    <TabBar>        
         <ShellContent
             Title="Home"            
             ContentTemplate="{DataTemplate local:MainPage}"

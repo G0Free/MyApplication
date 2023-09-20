@@ -5,7 +5,7 @@
              Title="Settings">
     <VerticalStackLayout
         Spacing="10"
-        VerticalOptions="Center">
+        VerticalOptions="Start">
         <Label 
             Text="Settings"
             VerticalOptions="Center" 
@@ -21,12 +21,17 @@
             </Grid.RowDefinitions>
 
             <Label 
-                Text="asd" 
+                Text="Dark mode" 
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" 
                 Grid.Column="0"
                 FontSize="28" />
-            <Button Text="On" Grid.Column="1"/>
+            <Switch
+                Margin="10"
+                Grid.Column="1"
+                IsToggled="False"
+                Toggled="BackGroundToggled"
+                />
 
         </Grid>
     </VerticalStackLayout>
