@@ -46,7 +46,7 @@ namespace MyApplication
                     
                     // Send an HTTP GET request to the URL and get the response
                     var response = client.GetAsync(url).Result;
-                    //TODO: Solve this stuck
+
                     // Check if the request was successful (status code 200)
                     if (response.IsSuccessStatusCode)
                     {
@@ -58,8 +58,7 @@ namespace MyApplication
                     }
                     else
                     {
-                        throw new HttpRequestException(response.StatusCode.ToString());
-                        //Console.WriteLine($"HTTP Error: {response.StatusCode}");                       
+                        throw new HttpRequestException(response.StatusCode.ToString());                      
                     }
                 }
                 catch (HttpRequestException e)
