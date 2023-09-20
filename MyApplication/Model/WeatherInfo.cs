@@ -28,7 +28,7 @@ namespace MyApplication.Model
         [JsonProperty("time")]
         public string Time { get; set; }
     }
-
+    
     public class WeatherInfo
     {
         [JsonProperty("latitude")]
@@ -50,7 +50,7 @@ namespace MyApplication.Model
         public string TimezoneAbbreviation { get; set; }
 
         [JsonProperty("elevation")]
-        public int Elevation { get; set; }
+        public double Elevation { get; set; }
 
         [JsonProperty("current_weather")]
         public CurrentWeather CurrentWeather { get; set; }
