@@ -1,6 +1,5 @@
-﻿using MyApplication.Assests;
+﻿using MyApplication.Model;
 using Newtonsoft.Json;
-using System.Net.Http.Json;
 
 namespace MyApplication
 {
