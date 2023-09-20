@@ -10,23 +10,17 @@
             VerticalOptions="Center">
 
             <Image
-                Source="dotnet_bot.png"
+                x:Name="Image"
+                Source="sunny.svg"
                 SemanticProperties.Description="Cute dot net bot waving hi to you!"
                 HeightRequest="100"
                 HorizontalOptions="Center" />
 
             <Label
-                Text="Hello, Friend!"
+                Text="Weather Forecast"
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="32"
-                HorizontalOptions="Center" />
-
-            <Label
-                Text="Welcome to Weather Forecast!"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
+                HorizontalOptions="Center" />          
 
             <Button
                 x:Name="RefreshBtn"
@@ -50,7 +44,7 @@
                HorizontalOptions="Center" />
 
             <Label
-               Text="Current time:"
+               Text="Server time:"
                SemanticProperties.HeadingLevel="Level3"
                FontSize="18"
                HorizontalOptions="Center" />
@@ -81,12 +75,26 @@
                FontSize="18"
                HorizontalOptions="Center" />
 
+            <Image
+                x:Name="Arrow"
+                Source="arrow.svg"
+                HeightRequest="50"
+                HorizontalOptions="Center"
+                Rotation="0" />
+            
             <Label
                x:Name="WindDirectionValue"
                Text="lorem"
                SemanticProperties.HeadingLevel="Level4"
                FontSize="24"
                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="SettingsBtn"
+                Text="Settings"
+                Clicked="SettingClicked"
+                HorizontalOptions="Center"
+                />
 
         </VerticalStackLayout>
     </ScrollView>
