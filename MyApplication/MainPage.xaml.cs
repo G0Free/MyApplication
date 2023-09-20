@@ -28,15 +28,27 @@ namespace MyApplication
             
             var currentWeather = JsonConvert.DeserializeObject<WeatherInfo>(weatherInfo);
 
-            TemperatureValue.Text = currentWeather.CurrentWeather.Temperature.ToString() + " C";
+            TemperatureValue.Text = currentWeather.CurrentWeather.Temperature.ToString() + " °C";
             TimeValue.Text = currentWeather.CurrentWeather.Time.ToString();
             WindSpeedValue.Text = currentWeather.CurrentWeather.Windspeed.ToString() + " km/h";
-            WindDirectionValue.Text = currentWeather.CurrentWeather.Winddirection.ToString();
+            WindDirectionValue.Text = currentWeather.CurrentWeather.Winddirection.ToString() + "°";
 
+            if (currentWeather.CurrentWeather.Weathercode == 1)
+            {
+                Image.Source = "sunny.svg";
+            }
+            else
+            {
+                Image.Source = "rain.svg";
+            }
+            Arrow.Rotation = (double)currentWeather.CurrentWeather.Winddirection;
+            
             SemanticScreenReader.Announce(TemperatureValue.Text);
             SemanticScreenReader.Announce(TimeValue.Text);
             SemanticScreenReader.Announce(WindSpeedValue.Text);
             SemanticScreenReader.Announce(WindDirectionValue.Text);
+            SemanticScreenReader.Announce(Arrow.Rotation.ToString());
+            
         }
 
         private static async Task<string> GetWeatherInfoAsnyc()
@@ -71,6 +83,11 @@ namespace MyApplication
                 }
                 return null;
             }
+        }
+
+        private void SettingClicked(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
     }
 }
