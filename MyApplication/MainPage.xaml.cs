@@ -23,7 +23,7 @@ namespace MyApplication
                 weatherInfo = weatherInfTask.Result;
             }
             else if (weatherInfTask.IsFaulted)
-            {
+            {                
                 weatherInfo = "";
             }
             
@@ -43,7 +43,7 @@ namespace MyApplication
                 {
                     // Specify the URL of the JSON file you want to download
                     string url = "https://api.open-meteo.com/v1/forecast?latitude=47.4984&longitude=19.0404&current_weather=true&timezone=Europe%2FBerlin";
-                    ;
+                    
                     // Send an HTTP GET request to the URL and get the response
                     var response = client.GetAsync(url).Result;
                     //TODO: Solve this stuck
@@ -59,10 +59,8 @@ namespace MyApplication
                     else
                     {
                         throw new HttpRequestException(response.StatusCode.ToString());
-                        //Console.WriteLine($"HTTP Error: {response.StatusCode}");
-                        return null;
+                        //Console.WriteLine($"HTTP Error: {response.StatusCode}");                       
                     }
-                    return null;
                 }
                 catch (HttpRequestException e)
                 {
