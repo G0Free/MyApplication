@@ -5,7 +5,6 @@ namespace MyApplication
 {
     public partial class MainPage : ContentPage
     {
-        string temp;
         public MainPage()
         {
             InitializeComponent();
@@ -28,10 +27,16 @@ namespace MyApplication
             }
             
             var currentWeather = JsonConvert.DeserializeObject<WeatherInfo>(weatherInfo);
-            temp = currentWeather.CurrentWeather.Temperature.ToString();
 
-            TemperatureValue.Text = temp;
+            TemperatureValue.Text = currentWeather.CurrentWeather.Temperature.ToString() + " C";
+            TimeValue.Text = currentWeather.CurrentWeather.Time.ToString();
+            WindSpeedValue.Text = currentWeather.CurrentWeather.Windspeed.ToString() + " km/h";
+            WindDirectionValue.Text = currentWeather.CurrentWeather.Winddirection.ToString();
+
             SemanticScreenReader.Announce(TemperatureValue.Text);
+            SemanticScreenReader.Announce(TimeValue.Text);
+            SemanticScreenReader.Announce(WindSpeedValue.Text);
+            SemanticScreenReader.Announce(WindDirectionValue.Text);
         }
 
         private static async Task<string> GetWeatherInfoAsnyc()
@@ -53,7 +58,6 @@ namespace MyApplication
                         // Read the JSON content as a string
                         string jsonContent = await response.Content.ReadAsStringAsync();
 
-                        // Now, you can work with the downloaded JSON data (e.g., parse it or save it to a file)
                         return jsonContent;
                     }
                     else
