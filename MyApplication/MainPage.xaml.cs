@@ -8,6 +8,7 @@ namespace MyApplication
         public MainPage()
         {
             InitializeComponent();
+            RefreshClicked(null,null);
         }
 
         private void RefreshClicked(object sender, EventArgs e)
@@ -43,11 +44,11 @@ namespace MyApplication
             }
             Arrow.Rotation = (double)currentWeather.CurrentWeather.Winddirection;
             
-            SemanticScreenReader.Announce(TemperatureValue.Text);
-            SemanticScreenReader.Announce(TimeValue.Text);
-            SemanticScreenReader.Announce(WindSpeedValue.Text);
-            SemanticScreenReader.Announce(WindDirectionValue.Text);
-            SemanticScreenReader.Announce(Arrow.Rotation.ToString());
+            //SemanticScreenReader.Announce(TemperatureValue.Text);
+            //SemanticScreenReader.Announce(TimeValue.Text);
+            //SemanticScreenReader.Announce(WindSpeedValue.Text);
+            //SemanticScreenReader.Announce(WindDirectionValue.Text);
+            //SemanticScreenReader.Announce(Arrow.Rotation.ToString());
             
         }
 

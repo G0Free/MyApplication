@@ -93,6 +93,7 @@
                 x:Name="SettingsBtn"
                 Text="Settings"
                 Clicked="SettingClicked"
+                IsEnabled="false"
                 HorizontalOptions="Center"
                 />
 
