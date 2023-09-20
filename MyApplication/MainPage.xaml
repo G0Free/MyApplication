@@ -33,7 +33,8 @@
                 Text="Refresh"
                 SemanticProperties.Hint="Refreshes the weather temperature"
                 Clicked="RefreshClicked"
-                HorizontalOptions="Center" />
+                HorizontalOptions="Center"
+                />
 
             <Label
                 Text="Current temperature:"

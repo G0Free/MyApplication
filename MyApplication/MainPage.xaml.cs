@@ -13,8 +13,6 @@ namespace MyApplication
 
         private void RefreshClicked(object sender, EventArgs e)
         {
-            temp = "tmp";
-
             //Download weatherinfo here          
             string weatherInfo = "";
             Task<string> weatherInfTask = GetWeatherInfoAsnyc();
@@ -28,18 +26,8 @@ namespace MyApplication
             {
                 weatherInfo = "";
             }
-
-            WeatherInfo currentWeather;
-            //Convert from json to object
-            if (weatherInfo != "")
-            {
-                currentWeather = JsonConvert.DeserializeObject<WeatherInfo>(weatherInfo);
-            }
-            else
-            {
-                currentWeather = new WeatherInfo();
-                currentWeather.CurrentWeather.Temperature = 0.0;                    
-            }
+            
+            var currentWeather = JsonConvert.DeserializeObject<WeatherInfo>(weatherInfo);
             temp = currentWeather.CurrentWeather.Temperature.ToString();
 
             TemperatureValue.Text = temp;
@@ -57,7 +45,7 @@ namespace MyApplication
                     string url = "https://api.open-meteo.com/v1/forecast?latitude=47.4984&longitude=19.0404&current_weather=true&timezone=Europe%2FBerlin";
                     ;
                     // Send an HTTP GET request to the URL and get the response
-                    HttpResponseMessage response = await client.GetAsync(url);
+                    var response = client.GetAsync(url).Result;
                     //TODO: Solve this stuck
                     // Check if the request was successful (status code 200)
                     if (response.IsSuccessStatusCode)
