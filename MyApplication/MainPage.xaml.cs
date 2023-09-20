@@ -34,14 +34,30 @@ namespace MyApplication
             WindSpeedValue.Text = currentWeather.CurrentWeather.Windspeed.ToString() + " km/h";
             WindDirectionValue.Text = currentWeather.CurrentWeather.Winddirection.ToString() + "°";
 
-            if (currentWeather.CurrentWeather.Weathercode == 1)
+            if (currentWeather.CurrentWeather.Weathercode == 0)
             {
                 Image.Source = "sunny.svg";
+                WeatherText.Text = "Sunny";
+            }
+            else if (0 < currentWeather.CurrentWeather.Weathercode && currentWeather.CurrentWeather.Weathercode < 4)
+            {
+                Image.Source = "cloudy.svg";
+                WeatherText.Text = "Cloudy";
+            }
+            else if (47 < currentWeather.CurrentWeather.Weathercode && currentWeather.CurrentWeather.Weathercode < 70)
+            {
+                Image.Source = "rain.svg";
+                WeatherText.Text = "Rain";
             }
             else
             {
-                Image.Source = "rain.svg";
+                Image.Source = "skull.svg";
+                WeatherText.Text = "RIP";
             }
+
+
+
+
             Arrow.Rotation = (double)currentWeather.CurrentWeather.Winddirection;
             
             //SemanticScreenReader.Announce(TemperatureValue.Text);

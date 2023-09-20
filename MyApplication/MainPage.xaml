@@ -22,13 +22,12 @@
                 FontSize="32"
                 HorizontalOptions="Center" />          
 
-            <Button
-                x:Name="RefreshBtn"
-                Text="Refresh"
-                SemanticProperties.Hint="Refreshes the weather temperature"
-                Clicked="RefreshClicked"
-                HorizontalOptions="Center"
-                />
+            <Label
+               x:Name="WeatherText"
+               Text="lorem text"
+               SemanticProperties.HeadingLevel="Level4"
+               FontSize="24"
+               HorizontalOptions="Center" />
 
             <Label
                 Text="Current temperature:"
@@ -90,10 +89,10 @@
                HorizontalOptions="Center" />
 
             <Button
-                x:Name="SettingsBtn"
-                Text="Settings"
-                Clicked="SettingClicked"
-                IsEnabled="false"
+                x:Name="RefreshBtn"
+                Text="Refresh"
+                SemanticProperties.Hint="Refreshes the weather temperature"
+                Clicked="RefreshClicked"
                 HorizontalOptions="Center"
                 />
 
